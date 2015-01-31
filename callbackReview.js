@@ -76,14 +76,21 @@ console.log(map(numbers, function(num){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
-
+var uniq = function (namesArray, cb) {
+    for (var i = 0; i < namesArray.length; i++) {
+        for (var j = i + 1; j < namesArray.length; j++) {
+            if (namesArray[i] === namesArray[j]) {
+                namesArray.splice(j, 1);
+            }
+        }
+    }
+    cb(namesArray);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
-
-
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
