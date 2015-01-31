@@ -16,6 +16,9 @@ first(names, function (firstName) {
 
 
 
+var last = function (nameArray, cb) {
+    cb(nameArray[nameArray.length - 1]);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
