@@ -95,10 +95,20 @@ console.log(longest(sentence));
 
 
 //write a function called capitalize that takes in the myPoem variable and capitalizes every word 
-var myPoem = 'What is a jQuery but a misunderstood object?'
+var myPoem = 'what is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
-  //code here
+var capitalize = function(inputStr) {
+    var strArray = inputStr.split(' ');
+    for (var i = 0; i < strArray.length; i++) {
+        var letterArray = strArray[i].split('');
+        letterArray[0] = letterArray[0].toUpperCase();
+        strArray[i] = letterArray.join('');
+    }
+    return strArray.join(' ');
+};
+
+console.log(capitalize(myPoem));
 
 
 
