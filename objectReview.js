@@ -116,7 +116,7 @@ var vowler = function (inputStr) {
     return vowelObj;
 };
 
-console.log(vowler('This is a test.'));
+console.log(vowler('This is a test.'));g
 
 
 
