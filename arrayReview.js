@@ -17,7 +17,16 @@ console.log(last(threeItems));
 //Loop through evenArray removing all values that aren't even 
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
-  //code here
+var removeOdds = function(inputArray) {
+    for(var i = inputArray.length - 1; i >= 0; i--) {
+        if(inputArray[i] % 2 !== 0) {
+            inputArray.splice(i,1);
+        }
+    }
+    return inputArray;
+};
+
+console.log(removeOdds(evenArray));
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
