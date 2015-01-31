@@ -111,7 +111,13 @@ each(names, function(item, indice){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
-
+var getUserById = function (id, usersArray, cb) {
+    for (var i = 0; i < usersArray.length; i++) {
+        if (usersArray[i].id === id) {
+            cb(usersArray[i]);
+        }
+    }
+};
 
 var users = [
   {
@@ -133,10 +139,11 @@ var users = [
     address: '192 East 32 North'
   },
 ];
-getUserById('16t', users, function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + 'the name of ' + user.name + ' and the address of ' + user.address); 
-});
 
+
+getUserById('16t', users, function(user){
+  console.log('The user with the id 16t has the email of ' + user.email + ', the name of ' + user.name + ' and the address of ' + user.address); 
+});
 
 
 
