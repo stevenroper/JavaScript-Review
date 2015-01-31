@@ -2,7 +2,11 @@ var threeItems = [1,2,3];
 //create a function named 'last' that returns the last item from 'threeItems'
 //alert the result of your function
 
-  //code here
+var last = function(inputArray) {
+    return inputArray[inputArray.length - 1];
+};
+
+console.log(last(threeItems));
 
 
 
