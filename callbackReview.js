@@ -33,6 +33,16 @@ last(names, function(lastName){
 //have the contains function return a boolean value for if the name is in the array or not.
 
 
+var contains = function (name, namesArray, cb) {
+    var canFind = false;
+    for (var i = 0; i < namesArray.length; i++) {
+        if (namesArray[i] === name) {
+            canFind = true;
+        }
+    }
+    cb(canFind);
+};
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains('Colt', names, function(yes){
   if(yes){
