@@ -39,7 +39,17 @@ var getRandomArbitrary = function() {
 }
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-  //code here
+var findNum = function(randomNum, inputArray) {
+    for (var i = 0; i < inputArray.length; i++) {
+        if (inputArray[i] === randomNum) {
+            return true;
+        }
+    }
+    return false;
+};
+
+var ranNum = getRandomArbitrary();
+console.log(ranNum, findNum(ranNum, randomArray));
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
