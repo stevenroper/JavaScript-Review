@@ -153,7 +153,15 @@ getUserById('16t', users, function(user){
 
 
 //Looks through each value in the list, returning the first one that passes a truth test 
+var find = function (numArray, cb) {
+    for (var i = 0; i < numArray.length; i++) {
+        if (cb(numArray[i])) {
+            return numArray[i];
+        }
+    }
+};
+
 var numbers  = [1, 2, 3, 4, 5, 6];
-find(numbers, function(num){ 
+console.log(find(numbers, function(num){ 
   return num % 2 == 0; //should return 2
-})
+}));
