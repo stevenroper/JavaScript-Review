@@ -1,14 +1,26 @@
 /* Make sure you do these last */
 
 /*
-
 Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
 
 plusOneSum([1, 2, 3, 4]); // 14
-
 */
 
+var numbers = [1, 2, 3, 4, 5];
 
+var plusOneSum = function(numArray) {
+    var newNumArray = numArray.slice();
+    var sum = 0;
+    for (var i = 0; i < newNumArray.length; i++) {
+        newNumArray[i]++;
+    }
+    for (var j = 0; j < newNumArray.length; j++) {
+        sum = sum + newNumArray[j];
+    }
+    return sum;
+};
+
+console.log(plusOneSum(numbers));
 
 /*
 
