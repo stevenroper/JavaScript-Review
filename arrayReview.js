@@ -60,7 +60,8 @@ console.log(ranNum, findNum(ranNum, randomArray));
 var first = [1,2,3,4,5];
 var second;
 
-  //code here
+second = first.slice();
+second.push(6, 7);
 
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
