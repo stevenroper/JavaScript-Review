@@ -22,6 +22,7 @@ var plusOneSum = function(numArray) {
 
 console.log(plusOneSum(numbers));
 
+
 /*
 
 Write a function that accepts a multi dimensional array and returns a flattened version.
