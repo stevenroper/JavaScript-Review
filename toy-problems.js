@@ -24,13 +24,25 @@ console.log(plusOneSum(numbers));
 
 
 /*
-
 Write a function that accepts a multi dimensional array and returns a flattened version.
 
 flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
-
 */
+var numbers = [1, 2, [3, [4], 5, 6], [7, 8, 9], 10];
+var newArray = [];
+var flattenArray = function (inputArray) {
+    for (var i = 0; i < inputArray.length; i++) {
+        if (typeof inputArray[i] === 'object') {
+            flattenArray(inputArray[i]);
+        } else if (typeof inputArray[i] === 'number') {
+            newArray.push(inputArray[i]);
+        }
+    }
+    return newArray;
+};
 
+
+console.log(flattenArray(numbers));
 
 
 /*
