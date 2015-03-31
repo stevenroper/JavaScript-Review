@@ -51,6 +51,26 @@ Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to
 
 */
 
+var arr = ["a1", "a2", "a3", "aN", "b1", "b2", "b3", "bN", "c1", "c2", "c3", "cN"];
+
+var reArrange = function(inputArr) {
+    var newArray = [];
+    for(var i = 0; i < inputArr.length; i++) {
+        var strArray1 = inputArr[i].split('');
+        for(var j = 0; j < inputArr.length; j++) {
+            var strArray2 = inputArr[j].split('');
+            if(newArray.length !== inputArr.length) {
+                if(strArray1[1] === strArray2[1]) {
+                    newArray.push(strArray2.join(''));
+                }
+            }
+        }
+    }
+    
+    return newArray;
+};
+
+console.log(reArrange(arr));
 
 /*
 
